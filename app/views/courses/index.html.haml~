@@ -1,0 +1,10 @@
+%h1 Tillgängliga kurser
+
+%table{:class => "courses"}
+	-	if @courses.empty?
+		%tr
+			%td{:class => "courses_not_found"} Inga kurser funna
+-	@courses.each do |course|
+	%tr
+		%td= course.name
+
